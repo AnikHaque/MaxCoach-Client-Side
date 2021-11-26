@@ -1,0 +1,33 @@
+.banner1{
+    background-image: url('../../../images1/banner1.jpg');
+    background-size: cover;
+    height: 85vh;
+    background-position: center;
+}
+.banner2{
+    background-image: url('../../../images1/banner2.jpg');
+    background-size: cover;
+    height: 85vh;
+    background-position: center;
+}
+.banner-sub{
+    margin-top: 200px;
+    font-weight: 900;
+    font-family: Roboto;
+    color: gray;
+}
+.banner-title{
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    color: #3f3a64;
+    line-height: 75px;
+    margin-left: 70px;
+}
+.title-extra{
+    color: #3a7e69;
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 400;
+    font-style: italic;
+}

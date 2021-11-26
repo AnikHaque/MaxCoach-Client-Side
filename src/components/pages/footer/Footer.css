@@ -1,0 +1,15 @@
+.footer{
+    background-color: white;
+    color: black;
+    padding: 50px;
+    margin-top: 150px;
+
+}
+.footer li{
+    list-style-type: none;
+    
+}
+.footer li a{
+    text-decoration: none;
+    color: #45695e;
+}
