@@ -11,7 +11,7 @@ const HomeService = () => {
     const [products, setProducts] = useState([])
     const {user} = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/coaching')
+        fetch('https://thawing-harbor-64472.herokuapp.com/coaching')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

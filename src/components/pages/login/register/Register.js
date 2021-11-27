@@ -46,7 +46,7 @@ const handleOnChange = e => {
 <h1 className="fw-bold text-center">Please Register</h1>
           </Typography>
 
-{ !isLoading && <form className="bg-primary text-white p-5 mb-5" onSubmit={handleLoginSubmit}>
+{ !isLoading && <form className="bg-success text-white p-5 mb-5" onSubmit={handleLoginSubmit}>
     <TextField 
     sx={{width:'75%', m:1}}
     name="email"
@@ -95,7 +95,7 @@ onChange={handleOnChange}
     </form>
     
 }
-<Button onClick={handleGoogleSignIn} variant="contained">Sign In With Google</Button>
+<Button onClick={handleGoogleSignIn} className="bg-success text-white">Sign In With Google</Button>
 {
     isLoading && <CircularProgress color="inherit" />
 

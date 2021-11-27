@@ -15,7 +15,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data =>{
         console.log(data);
-        axios.post("http://localhost:5000/coaching",data)
+        axios.post("https://thawing-harbor-64472.herokuapp.com/coaching",data)
         .then(res=>{
             if(res.data.insertedId){
                 alert("Added Successfully");

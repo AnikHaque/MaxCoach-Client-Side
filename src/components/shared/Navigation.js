@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const navigationLink =  {
-color:'black',
+color:'white',
 textDecoration:'none'
 }
 
@@ -20,7 +20,8 @@ const navImage = {
 const navigation = {
   paddingTop:'10px',
   paddingBottom:'10px',
-  backgroundColor:'white'
+  backgroundColor:'#3a7e69'
+ 
 }
 const Navigation = () => {
   const {user,logOut} = useAuth();
@@ -32,34 +33,34 @@ const Navigation = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <img style={navImage} src="https://maxcoach.vuedemo.hasthemes.com/images/logo/dark-logo.png"></img>
             </Typography>
-           <Link to="/home">
-           <Button style={navigationLink}>Home</Button>
+           <Link to="/home" style={navigationLink}>
+           <Button className="text-white">Home</Button>
            </Link>
-           <Link to="/about">
-           <Button style={navigationLink}>About</Button>
+           <Link to="/about" style={navigationLink}>
+           <Button className="text-white">About</Button>
            </Link>
-           <Link to="/courses">
-           <Button style={navigationLink}>Courses</Button>
+           <Link to="/courses" style={navigationLink}>
+           <Button className="text-white">Courses</Button>
            </Link>
-           <Link to="/blogs">
-           <Button style={navigationLink}>Blogs</Button>
+           <Link to="/blogs" style={navigationLink}>
+           <Button className="text-white">Blogs</Button>
            </Link>
-           <Link to="/events">
-           <Button style={navigationLink}>Events</Button>
+           <Link to="/events" style={navigationLink}>
+           <Button className="text-white">Events</Button>
            </Link>
-           <Link to="/contact">
-           <Button style={navigationLink}>Contact</Button>
+           <Link to="/contact" style={navigationLink}>
+           <Button className="text-white">Contact</Button>
            </Link>
-           <Link to="/dashboard">
-           <Button style={navigationLink}>Dashboard</Button>
+           <Link to="/dashboard" style={navigationLink}>
+           <Button className="text-white">Dashboard</Button>
            </Link>
           {
             user?.email ?
             
             <Button onClick={logOut} style={navigationLink}>Logout</Button>
             :
-            <Link to="/Login">
-            <Button style={navigationLink}>Login</Button>
+            <Link to="/Login" >
+            <button className="btn btn-warning">Login</button>
             </Link>
           }
           </Toolbar>

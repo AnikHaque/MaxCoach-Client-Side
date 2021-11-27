@@ -35,7 +35,7 @@ const ProductDetail = () => {
     const {id} = useParams();
     const [product,setProduct] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/coaching/${id}`)
+        fetch(`https://thawing-harbor-64472.herokuapp.com/coaching/${id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
 
@@ -44,7 +44,7 @@ const ProductDetail = () => {
     const onSubmit = data =>{
         data.status="pending";
         console.log(data);
-        axios.post("http://localhost:5000/orders",data)
+        axios.post("https://thawing-harbor-64472.herokuapp.com/orders",data)
         .then(res=>{
             if(res.data.insertedId){
                 alert("Added Successfully");

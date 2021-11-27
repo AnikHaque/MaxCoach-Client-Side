@@ -15,12 +15,12 @@ const product = ({ product }) => {
       <img src={img} class="card-img-top" alt="..."></img>
       <div class="card-body">
         <h5 class="card-title text-center">{name1}</h5>
-        <h4 className="text-center">{price} Taka</h4>
+        <h4 className="text-center"> $ {price} </h4>
       </div>
       <div class="card-footer">
           
         <Link to={`/coaching/${_id}`}>
-        <button className="btn btn-primary mx-5">View Details</button>
+        <button className="btn btn-success mx-5">View Details</button>
         </Link>
         
       
