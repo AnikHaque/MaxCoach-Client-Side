@@ -41,17 +41,25 @@ const ProductDetail = () => {
 
     },[])
     const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data =>{
+    const onSubmit = (data) =>{
         data.status="pending";
-        console.log(data);
-        axios.post("https://thawing-harbor-64472.herokuapp.com/orders",data)
-        .then(res=>{
-            if(res.data.insertedId){
-                alert("Added Successfully");
-                reset();
-                
-            }
+        data.email=user.email;
+       
+        fetch("http://localhost:5000/confirmOrder", {
+            method:"POST",
+            headers:{"content-type": "application/json"},
+            body:JSON.stringify(data),
         })
+        .then(result=>console.log(result));
+        console.log(data);
+        // axios.post("https://thawing-harbor-64472.herokuapp.com/orders",data)
+        // .then(res=>{
+        //     if(res.data.insertedId){
+        //         alert("Added Successfully");
+        //         reset();
+                
+        //     }
+        // })
     } 
     return (
         <div> 
@@ -74,10 +82,9 @@ const ProductDetail = () => {
         <h1 className="text-center fw-bold">Enroll The Course</h1>
         
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("email", { required: true, maxLength: 200 })} placeholder="name"  defaultValue={user.email} />
 <br></br>
 <br></br>
-      <input {...register("name1", { required: true, maxLength: 200 })} placeholder="Student Name"/>
+      <input {...register("name1", { required: true, maxLength: 200 })} placeholder="Course Name"/>
 <br></br>
 <br></br>
       

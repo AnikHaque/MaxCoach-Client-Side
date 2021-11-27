@@ -56,8 +56,13 @@ const Navigation = () => {
            </Link>
           {
             user?.email ?
-            
+            <div>
+              <Link to="/myorder" style={navigationLink}>
+           <Button className="text-white">My Orders</Button>
+           </Link>
+            <Button  style={navigationLink}>{user.email}</Button>
             <Button onClick={logOut} style={navigationLink}>Logout</Button>
+            </div>
             :
             <Link to="/Login" >
             <button className="btn btn-warning">Login</button>

@@ -13,7 +13,7 @@ import Register from './components/pages/login/register/Register'
 import PrivateRoute from './components/pages/login/privateRoute/PrivateRoute';
 import Services from './components/pages/services/Services';
 import ProductDetail from '../src/components/pages/productDetail/ProductDetail';
-
+import MyOrder from '../src/components/pages/myorder/MyOrder'
 function App() {
   return (
     <div className="App">
@@ -29,6 +29,9 @@ function App() {
         </Route>
         <Route exact path="/courses">
 <Services></Services>
+</Route>
+        <Route exact path="/myorder">
+<MyOrder></MyOrder>
 </Route>
 <PrivateRoute path="/coaching/:id">
               <ProductDetail></ProductDetail>
