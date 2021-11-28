@@ -45,7 +45,7 @@ const ProductDetail = () => {
         data.status="pending";
         data.email=user.email;
        
-        fetch("https://thawing-harbor-64472.herokuapp.com/confirmOrder", {
+        fetch('https://thawing-harbor-64472.herokuapp.com/confirmOrder', {
             method:"POST",
             headers:{"content-type": "application/json"},
             body:JSON.stringify(data),
