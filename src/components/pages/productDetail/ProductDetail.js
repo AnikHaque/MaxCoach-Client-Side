@@ -45,21 +45,14 @@ const ProductDetail = () => {
         data.status="pending";
         data.email=user.email;
        
-        fetch("http://localhost:5000/confirmOrder", {
+        fetch("https://thawing-harbor-64472.herokuapp.com/confirmOrder", {
             method:"POST",
             headers:{"content-type": "application/json"},
             body:JSON.stringify(data),
         })
         .then(result=>console.log(result));
         console.log(data);
-        // axios.post("https://thawing-harbor-64472.herokuapp.com/orders",data)
-        // .then(res=>{
-        //     if(res.data.insertedId){
-        //         alert("Added Successfully");
-        //         reset();
-                
-        //     }
-        // })
+        
     } 
     return (
         <div> 
